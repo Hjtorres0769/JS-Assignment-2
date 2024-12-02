@@ -4,11 +4,13 @@
 // Array example: bankAccounts in /data/data.js
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
+
 export function getAllClientNames(array) {
-  // Your code goes here...
-
+  let names = [];
+  for (let account of array) {
+      names.push(account.name);
+      } return names;
 }
-
 
 
 // === TEST YOURSELF ===
