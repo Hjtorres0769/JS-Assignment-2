@@ -7,10 +7,13 @@
  * Return the average value for the given array of numbers.
  * Example: getAverage([22, 45, 4, 65]) => 34
  * */
-
 export function getAverage(array) {
-  // Your code goes here...
-
+    let avg = 0;
+    let total = 0;
+    for (let i = 0; i < array.length; i++) {
+        total += array[i];
+        avg = total/(i + 1);
+    } return avg;
 }
 
 
@@ -22,7 +25,12 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
+    let total = 0;
+    for (let char in str) {
+        if (Number(str[char]) >= 0) {
+            total += Number(str[char]);
+        }
+    }   return total;
 
 }
 
