@@ -5,11 +5,15 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  // Your code goes here...
-
+    let array = []
+    for (let arr of arr1) {
+        array.push(arr);
+    }
+    for (let arr of arr2) {
+        array.push(arr);
+    }
+    return array;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-15"
