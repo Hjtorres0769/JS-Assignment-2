@@ -6,10 +6,21 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  // Your code goes here...
-
+    let aNames = [];
+    let nonANames = [];
+    for (let name of array) {
+        let hasA = false;
+        for (let letter of name) {
+            if (letter === 'a') {
+                hasA = true;
+            }
+        }   if (hasA === true) {
+            aNames.push(name);
+        }   else {
+            nonANames.push(name);
+        }
+    }   return [aNames, nonANames];
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"

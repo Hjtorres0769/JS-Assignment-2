@@ -3,12 +3,13 @@
 // Return an array of numbers in 1..10
 // getFirstTenNumbers() => [1, 2, 3, ... , 10]
 
-export function getFirstTenNumbers() {
-  let firstTen = [];
-  for (let i = 1; i < 11; i++) {
-      firstTen.push(i);
-  } return firstTen;
-
+export function getNumbersWithSquareRoots(max) {
+    let numbers = []
+    for (let i = 0; i < max; i++) {
+        if (typeof Math.sqrt(i) === 'number' && Math.floor(Math.sqrt(i)) === Math.sqrt(i)) {
+            numbers.push(i);
+        }
+    }   return numbers;
 }
 
 // === TEST YOURSELF ===
